@@ -1,0 +1,14 @@
+{
+    "rules": {
+        "rule1": {
+            "description": "La imagen base debe ser especificada",
+            "regex": "^FROM\\s+",
+            "errorMessage": "Debes especificar una imagen base usando la instrucción FROM."
+        },
+        "rule2": {
+            "description": "Debe haber un comando CMD o ENTRYPOINT",
+            "regex": "^(CMD|ENTRYPOINT)\\s+",
+            "errorMessage": "Debes especificar un comando de inicio usando CMD o ENTRYPOINT."
+        }
+    }
+}

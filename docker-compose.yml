@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  flask-app:
+    build: .
+    ports:
+      - "5000:5000"
+    networks:
+      - my-network
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8081:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf # Asegúrate de que el archivo nginx.conf esté en la raíz del proyecto
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
