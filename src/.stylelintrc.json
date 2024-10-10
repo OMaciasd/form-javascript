@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss"
+  ],
+  "rules": {
+    "string-quotes": ["single", { "avoidEscape": true }],
+    "custom-property-empty-line-before": "never",
+    "alpha-value-notation": "percentage",
+    "color-hex-length": "short",
+    "selector-id-pattern": "^[a-z0-9\\-]+$",
+    "media-feature-range-notation": "prefix",
+    "indentation": 2
+  }
+}
